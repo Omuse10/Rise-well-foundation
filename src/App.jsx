@@ -249,8 +249,58 @@ function App() {
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <div className="font-semibold text-gray-900">Grace Wanjiku</div>
-                  <div className="text-gray-600">Community Leader, Kiambu</div>
+                  <div className="font-semibold text-gray-900">Raphael Kanini</div>
+                  <div className="text-gray-600">Children's garden home and school student, Uthiru</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                <div className="flex text-orange-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 italic">
+                "Thanks to the Rise-well Foundation, we now have access to affordable healthcare. The mobile 
+                clinic visits have saved countless lives in our community."
+              </p>
+              <div className="flex items-center">
+                <img 
+                  src="https://images.pexels.com/photos/8815516/pexels-photo-8815516.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                  alt="Community member" 
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">Grace Mwende</div>
+                  <div className="text-gray-600">Community Health Advocate, Machakos</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                <div className="flex text-orange-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 italic">
+                "The Rise-well vocational training program gave me the skills to start my own carpentry business. 
+                I am now able to provide for my family and train others in the community."
+              </p>
+              <div className="flex items-center">
+                <img 
+                  src="https://images.pexels.com/photos/8815149/pexels-photo-8815149.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                  alt="Program beneficiary" 
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">John Kamau</div>
+                  <div className="text-gray-600">Carpenter, Eldoret</div>
                 </div>
               </div>
             </div>
@@ -274,8 +324,8 @@ function App() {
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <div className="font-semibold text-gray-900">Mary Nyambura</div>
-                  <div className="text-gray-600">Entrepreneur, Nakuru</div>
+                  <div className="font-semibold text-gray-900">Mercy Waithira</div>
+                  <div className="text-gray-600">Children's garden home and school student, Nairobi</div>
                 </div>
               </div>
             </div>
@@ -301,35 +351,35 @@ function App() {
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Victor Kibe</h3>
-              <p className="text-emerald-600 font-medium mb-3">Executive Director</p>
+              <p className="text-emerald-600 font-medium mb-3">Chief Executive Director</p>
               <p className="text-gray-600 text-sm">
-                15+ years experience in community development and non-profit leadership across East Africa.
+              Responsible for guiding the organization’s strategic direction, overseeing operations, and working with the team to achieve its mission and long-term goals.
               </p>
             </div>
 
             <div className="text-center">
               <img 
-                src="https://images.pexels.com/photos/8815986/pexels-photo-8815986.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://i.postimg.cc/YCvk7phZ/IMG-20250126-WA0004.jpg" 
                 alt="Program Manager" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Geoffrey Omuse</h3>
-              <p className="text-emerald-600 font-medium mb-3">Program Manager</p>
+              <p className="text-emerald-600 font-medium mb-3">ICT Manager</p>
               <p className="text-gray-600 text-sm">
-                Specialist in education programs with a master's degree in International Development.
+              Skilled in managing technology systems, website development, and IT solutions that support the organization’s digital growth and innovation.
               </p>
             </div>
 
             <div className="text-center">
               <img 
-                src="https://images.pexels.com/photos/8815149/pexels-photo-8815149.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://i.postimg.cc/FKxSQgfM/Whats-App-Image-2025-10-23-at-11-36-35-AM.jpg" 
                 alt="Community Coordinator" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Gregory Isaac</h3>
-              <p className="text-emerald-600 font-medium mb-3">Community Coordinator</p>
+              <p className="text-emerald-600 font-medium mb-3">Organising Secretary</p>
               <p className="text-gray-600 text-sm">
-                Local community advocate with deep knowledge of rural development challenges and solutions.
+              Efficient in planning, coordinating, and managing organizational activities, ensuring smooth operations and effective communication within the team.
               </p>
             </div>
 
@@ -340,9 +390,9 @@ function App() {
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Isaac Arabu</h3>
-              <p className="text-emerald-600 font-medium mb-3">Tech coordinator</p>
+              <p className="text-emerald-600 font-medium mb-3">ICT Specialist</p>
               <p className="text-gray-600 text-sm">
-                Experienced Tech coordinator with a passion for leveraging technology for social good.
+              Enthusiastic about robotics and technology integration, driving innovation through creative tech solutions that enhance learning and digital advancement within the organization
               </p>
             </div>
 
@@ -352,10 +402,10 @@ function App() {
                 alt="Volunteer Coordinator" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Sam al</h3>
-              <p className="text-emerald-600 font-medium mb-3">Volunteer Coordinator</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Stella Kwamboka</h3>
+              <p className="text-emerald-600 font-medium mb-3">Legal Officer</p>
               <p className="text-gray-600 text-sm">
-                Skilled in volunteer management and community engagement with a background in social work.
+              Knowledgeable in legal matters, ensuring the organization complies with laws and regulations while protecting its interests.
               </p>
             </div>
             
@@ -368,7 +418,7 @@ function App() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Paul Owindo</h3>
               <p className="text-emerald-600 font-medium mb-3">Entertainment coordinator</p>
               <p className="text-gray-600 text-sm">
-                Skilled in coordinating and managing Entertainment field.
+              Creative and energetic in planning, organizing, and managing entertainment activities that bring people together and make every event lively and engaging.
               </p>
             </div>
           </div>
@@ -424,7 +474,7 @@ function App() {
                   <Mail className="h-6 w-6 text-emerald-400 mr-4" />
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-gray-300">info@risewellkenya.org</div>
+                    <div className="text-gray-300">info@risewellfoundationkenya.org</div>
                   </div>
                 </div>
 
@@ -432,7 +482,7 @@ function App() {
                   <Globe className="h-6 w-6 text-emerald-400 mr-4" />
                   <div>
                     <div className="font-semibold">Website</div>
-                    <div className="text-gray-300">www.risewellkenya.org</div>
+                    <div className="text-gray-300">www.risewellfoundationkenya.org</div>
                   </div>
                 </div>
               </div>
