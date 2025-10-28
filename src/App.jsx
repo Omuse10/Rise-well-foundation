@@ -1,11 +1,54 @@
-import React, { useState } from 'react';
-import { Menu, X, Heart, Users, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { Menu, X, Users, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star } from 'lucide-react';
+import Logo from './assets/Logo.png';
 
 function App() {
+  const form = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Use emailjs for form submission
+    emailjs
+      .sendForm('service_sapsowe', 'template_6uwu43m', form.current, 'VBEB9vOTtWbtL9WDj')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setSubmitSuccess(true);
+          setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form data
+          setIsSubmitting(false); // Reset loading state
+
+          // Reset success message after 5 seconds
+          setTimeout(() => {
+            setSubmitSuccess(false);
+          }, 5000);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setIsSubmitting(false); // Reset loading state
+          alert('Failed to send message. Please try again later.');
+        },
+      );
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   return (
@@ -15,8 +58,12 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Heart className="h-8 w-8 text-[#DB9F75] mr-2"/>
-              <h1 className="text-4xl md:text-2xl font-black leading-tight mr-2">
+              <img 
+                src={Logo} 
+                alt="Rise-well Foundation Logo" 
+                className="h-24 w-28 mt-4" 
+              />
+              <h1 className="text-4xl md:text-2xl font-black leading-tight">
                 Rise-well Foundation Kenya
               </h1>
             </div>
@@ -90,19 +137,19 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">1,000+</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">150+</div>
               <div className="text-gray-600">Lives Impacted</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">10</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">3</div>
               <div className="text-gray-600">Communities Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">100+</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">20+</div>
               <div className="text-gray-600">Volunteers</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">5</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">1+</div>
               <div className="text-gray-600">Years of Service</div>
             </div>
           </div>
@@ -135,6 +182,16 @@ function App() {
                   <p className="text-gray-600">To empower communities through sustainable programs that promote education, health, and economic growth.</p>
                 </div>
               </div>
+              <div className="flex items-center space-x-4 mt-6">
+                <div className="bg-emerald-100 p-3 rounded-full">
+                  <Star className="h-6 w-6 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">Our Vision</h3>
+                  <p className="text-gray-600">Our Vision
+                  To build a self-reliant and thriving society where every individual has the opportunity to learn, live healthy, and prosper.</p>
+                </div>
+              </div>
             </div>
             <div className="relative">
               <img 
@@ -143,7 +200,7 @@ function App() {
                 className="rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -left-6 bg-orange-600 text-white p-6 rounded-lg shadow-lg">
-                <div className="text-2xl font-bold">5+</div>
+                <div className="text-2xl font-bold">1+</div>
                 <div className="text-sm">Years of Impact</div>
               </div>
             </div>
@@ -175,7 +232,7 @@ function App() {
                   every child has access to learning opportunities.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
-                  Learn More <ArrowRight className="h-4 w-4 ml-1" />
+                  View Projects <ArrowRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
             </div>
@@ -193,7 +250,7 @@ function App() {
                   health workers to improve healthcare access in rural areas.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
-                  Learn More <ArrowRight className="h-4 w-4 ml-1" />
+                  View projects <ArrowRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
             </div>
@@ -211,7 +268,7 @@ function App() {
                   skills to help communities become economically self-sufficient.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
-                  Learn More <ArrowRight className="h-4 w-4 ml-1" />
+                  View projects <ArrowRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
             </div>
@@ -346,7 +403,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <img 
-                src="https://images.pexels.com/photos/8815513/pexels-photo-8815513.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://i.postimg.cc/qM0497Dx/vicky.jpg" 
                 alt="Executive Director" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
@@ -411,7 +468,7 @@ function App() {
             
             <div className="text-center">
               <img 
-                src="https://images.pexels.com/photos/8815148/pexels-photo-8815148.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://i.postimg.cc/cCHnMG7N/paul.jpg" 
                 alt="Volunteer Coordinator" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
@@ -426,19 +483,93 @@ function App() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-20">
+      <section className="bg-emerald-50 Py-20"> {/* Updated colors */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
-          <p className="text-xl mb-8 text-orange-100 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mt-8 mb-6">Ready to Make a Difference?</h2>
+          <p className="text-xl mb-8 text-white-100 max-w-2xl mx-auto">
             Join us in our mission to transform lives and build stronger communities across Kenya.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
               Donate Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
+            <button className="border-2 border-white text-black px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
               Become a Volunteer
             </button>
+          </div>
+
+          {/* Volunteers Section */}
+          <div className=" mt-12 pb-20">
+            <h3 className="text-2xl font-bold mb-6">Meet Our Volunteers</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Volunteer 1: Saad */}
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center mb-4">
+                  <img 
+                    src="https://via.placeholder.com/150" // Replace with Saad's image URL
+                    alt="Al-Adhami, Saad" 
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
+                  />
+                  <div>
+                    <h4 className="text-xl font-semibold">Al-Adhami, Saad</h4>
+                  </div>
+                </div>
+                <p className="text-gray-600">
+                  Saad is a dedicated volunteer who works tirelessly to support our mission of empowering communities across Kenya. His passion for community service inspires us all.
+                </p>
+              </div>
+
+              {/* Volunteer 2: Zeyad */}
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center mb-4">
+                  <img 
+                    src="https://via.placeholder.com/150" // Replace with Zeyad's image URL
+                    alt="Zeyad" 
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
+                  />
+                  <div>
+                    <h4 className="text-xl font-semibold">Zeyad</h4>
+                  </div>
+                </div>
+                <p className="text-gray-600">
+                  A passionate volunteer who dedicates his time to teaching 3D printing and inspiring children to explore creativity through technology. His commitment to nurturing young innovators reflects our mission of empowering the next generation.
+                </p>
+              </div>
+
+              {/* Volunteer 3: Luca */}
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center mb-4">
+                  <img 
+                    src="https://via.placeholder.com/150" // Replace with Luca's image URL
+                    alt="Luca" 
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
+                  />
+                  <div>
+                    <h4 className="text-xl font-semibold">Luca</h4>
+                  </div>
+                </div>
+                <p className="text-gray-600">
+                  A creative volunteer who contributed to designing and developing our newsletter. His dedication to clear communication and engaging storytelling helps us share our impact and connect with the community more effectively.
+                </p>
+              </div>
+
+              {/* Volunteer 4: Yasmine */}
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center mb-4">
+                  <img 
+                    src="https://via.placeholder.com/150" // Replace with Yasmine's image URL
+                    alt="Yasmine" 
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
+                  />
+                  <div>
+                    <h4 className="text-xl font-semibold">Yasmine</h4>
+                  </div>
+                </div>
+                <p className="text-gray-600">
+                  A driven volunteer who has contributed to our community outreach initiatives. Her expertise and passion for making a difference in the lives of others inspire us all.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -490,7 +621,7 @@ function App() {
 
             <div className="bg-gray-800 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-              <form className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name
@@ -498,8 +629,12 @@ function App() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="Your full name"
+                    required
                   />
                 </div>
 
@@ -510,8 +645,28 @@ function App() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="your@email.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    placeholder="Subject"
+                    required
                   />
                 </div>
 
@@ -521,18 +676,26 @@ function App() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="How can we help you?"
+                    required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   className="w-full bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-300"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
+                {submitSuccess && (
+                  <p className="text-emerald-400 mt-4">Message sent successfully!</p>
+                )}
               </form>
             </div>
           </div>
@@ -545,7 +708,11 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center mb-4">
-                <Heart className="h-8 w-8 text-emerald-400 mr-2" />
+                <img 
+                  src={Logo}
+                  alt="Rise-well Foundation Logo" 
+                  className="h-28 w-32 ml-0 mr-0" 
+                />
                 <span className="text-xl font-bold text-white">Rise-well Foundation Kenya</span>
               </div>
               <p className="text-gray-400 mb-4">
@@ -553,15 +720,15 @@ function App() {
                 that empower local leaders and foster long-term growth.
               </p>
               <div className="flex space-x-4">
-                <div className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                <a href="#team" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                   <Users className="h-5 w-5" />
-                </div>
-                <div className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                </a>
+                <a href="mailto:info@risewellfoundationkenya.org" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                   <Mail className="h-5 w-5" />
-                </div>
-                <div className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                </a>
+                <a href="https://www.risewellfoundationkenya.org" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                   <Globe className="h-5 w-5" />
-                </div>
+                </a>
               </div>
             </div>
 
