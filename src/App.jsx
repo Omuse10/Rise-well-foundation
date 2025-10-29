@@ -1,13 +1,11 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { useForm, ValidationError } from '@formspree/react';
 import { Menu, X, Users, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star } from 'lucide-react';
 import Logo from './assets/Logo.png';
 
 function App() {
   const form = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,40 +13,30 @@ function App() {
     message: '',
   });
 
+  const [state, handleSubmit] = useForm("myzbwval"); // Replace "myzbwval" with your Formspree form ID
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Use emailjs for form submission
-    emailjs
-      .sendForm('service_sapsowe', 'template_6uwu43m', form.current, 'VBEB9vOTtWbtL9WDj')
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setSubmitSuccess(true);
-          setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form data
-          setIsSubmitting(false); // Reset loading state
-
-          // Reset success message after 5 seconds
-          setTimeout(() => {
-            setSubmitSuccess(false);
-          }, 5000);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setIsSubmitting(false); // Reset loading state
-          alert('Failed to send message. Please try again later.');
-        },
-      );
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmitForm = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    const result = await handleSubmit(e); // Use Formspree's handleSubmit
+    if (result.succeeded) {
+      // Reset form fields after successful submission
+      setFormData({
+        name: '', // Clear the "Full Name" field
+        email: '', // Clear the "Email Address" field
+        subject: '', // Clear the "Subject" field
+        message: '', // Clear the "Message" text area
+      });
+    }
   };
 
   return (
@@ -63,7 +51,7 @@ function App() {
                 alt="Rise-well Foundation Logo" 
                 className="h-24 w-28 mt-4" 
               />
-              <h1 className="text-4xl md:text-2xl font-black leading-tight">
+              <h1 className="text-2xl md:text-4xl font-black leading-tight text-center">
                 Rise-well Foundation Kenya
               </h1>
             </div>
@@ -392,7 +380,7 @@ function App() {
 
       {/* Team Section */}
       <section id="team" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Team</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -483,7 +471,7 @@ function App() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-emerald-50 Py-20"> {/* Updated colors */}
+      <section className="bg-emerald-50 Py-20 md:py-20"> {/* Updated colors */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mt-8 mb-6">Ready to Make a Difference?</h2>
           <p className="text-xl mb-8 text-white-100 max-w-2xl mx-auto">
@@ -621,7 +609,7 @@ function App() {
 
             <div className="bg-gray-800 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmitForm} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name
@@ -630,8 +618,8 @@ function App() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    value={formData.name} // Controlled input bound to formData
+                    onChange={handleChange} // Update formData on change
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="Your full name"
                     required
@@ -646,12 +634,13 @@ function App() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={formData.email} // Controlled input bound to formData
+                    onChange={handleChange} // Update formData on change
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="your@email.com"
                     required
                   />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} />
                 </div>
 
                 <div>
@@ -662,8 +651,8 @@ function App() {
                     type="text"
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    value={formData.subject} // Controlled input bound to formData
+                    onChange={handleChange} // Update formData on change
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="Subject"
                     required
@@ -678,22 +667,23 @@ function App() {
                     id="message"
                     name="message"
                     rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
+                    value={formData.message} // Controlled input bound to formData
+                    onChange={handleChange} // Update formData on change
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     placeholder="How can we help you?"
                     required
                   ></textarea>
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
                 </div>
 
                 <button
                   type="submit"
                   className="w-full bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-300"
-                  disabled={isSubmitting}
+                  disabled={state.submitting} // Disable button while submitting
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {state.submitting ? 'Sending...' : 'Send Message'}
                 </button>
-                {submitSuccess && (
+                {state.succeeded && (
                   <p className="text-emerald-400 mt-4">Message sent successfully!</p>
                 )}
               </form>
