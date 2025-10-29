@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Menu, X, Users, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star } from 'lucide-react';
+import { Menu, X, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react';
 import Logo from './assets/Logo.png';
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Navigation */}
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,9 +49,9 @@ function App() {
               <img 
                 src={Logo} 
                 alt="Rise-well Foundation Logo" 
-                className="h-24 w-28 mt-4" 
+                className="h-24 w-28 mt-4"
               />
-              <h1 className="text-2xl md:text-4xl font-black leading-tight text-center">
+              <h1 className="text-left md:text-2xl font-black leading-tight md:text-left">
                 Rise-well Foundation Kenya
               </h1>
             </div>
@@ -710,14 +710,17 @@ function App() {
                 that empower local leaders and foster long-term growth.
               </p>
               <div className="flex space-x-4">
-                <a href="#team" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
-                  <Users className="h-5 w-5" />
+                <a href="https://www.facebook.com/risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                  <Facebook className="h-5 w-5 text-white" />
                 </a>
-                <a href="mailto:info@risewellfoundationkenya.org" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
-                  <Mail className="h-5 w-5" />
+                <a href="https://www.instagram.com/risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                  <Instagram className="h-5 w-5 text-white" />
                 </a>
-                <a href="https://www.risewellfoundationkenya.org" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
-                  <Globe className="h-5 w-5" />
+                <a href="https://www.twitter.com/@risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                  <Twitter className="h-5 w-5 text-white" />
+                </a>
+                <a href="https://wwww.Linkedin.com/@risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                  <Linkedin className="h-5 w-5 text-white" />
                 </a>
               </div>
             </div>
