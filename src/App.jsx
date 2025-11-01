@@ -45,13 +45,13 @@ function App() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
+            <div className="flex items-center sm:items-start ml-2 sm:ml-4 lg:ml-6 sm:space-x-0">
               <img 
                 src={Logo} 
                 alt="Rise-well Foundation Logo" 
-                className="h-24 w-28 mt-4"
+                className="h-20 w-24 sm:h-24 sm:w-28 mt-2 sm:mt-0 ml-0 sm:ml-0 lg:-ml-2" 
               />
-              <h1 className="text-left md:text-2xl font-black leading-tight md:text-left">
+              <h1 className="text-left sm:text-2xl font-black leading-tight sm:text-left ml-0 sm:ml-0 lg:ml-0 lg:mt-8">
                 Rise-well Foundation Kenya
               </h1>
             </div>
@@ -443,7 +443,7 @@ function App() {
 
             <div className="text-center">
               <img 
-                src="https://images.pexels.com/photos/8815148/pexels-photo-8815148.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://i.postimg.cc/LXmyfH65/Stella.jpg" 
                 alt="Volunteer Coordinator" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
