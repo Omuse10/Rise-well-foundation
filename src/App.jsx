@@ -437,7 +437,7 @@ function App() {
 
             <div className="text-center">
               <img 
-                src="https://images.pexels.com/photos/8815515/pexels-photo-8815515.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                src="https://i.postimg.cc/qR1Kk28M/Whats-App-Image-2025-11-01-at-11-27-15-PM.jpg"
                 alt="Healthcare Specialist" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
