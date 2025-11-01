@@ -1,7 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Menu, X, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react';
 import Logo from './assets/Logo.png';
+import Donate from './Pages/Donate';
+import Volunteer from './Pages/Volunteer';
+
 
 function App() {
   const form = useRef(null);
@@ -40,8 +44,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* Navigation */}
+    <BrowserRouter basename="/Rise-well-foundation">
+    <Routes>
+      <Route path="/" element={
+        <div className="min-h-screen bg-white flex flex-col">
+          {/* Navigation */}
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -64,9 +71,9 @@ function App() {
               <a href="#impact" className="text-gray-700 hover:text-emerald-600 transition-colors">Impact</a>
               <a href="#team" className="text-gray-700 hover:text-emerald-600 transition-colors">Team</a>
               <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
-              <button className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
+              <Link to="/donate" className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
                 Donate Now
-              </button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -88,9 +95,9 @@ function App() {
               <a href="#impact" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Impact</a>
               <a href="#team" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Team</a>
               <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Contact</a>
-              <button className="w-full text-left bg-orange-600 text-white px-3 py-2 rounded-md hover:bg-orange-700 transition-colors">
+              <Link to="/donate" className="w-full text-left bg-orange-600 text-white px-3 py-2 rounded-md hover:bg-orange-700 transition-colors">
                 Donate Now
-              </button>
+              </Link>
             </div>
           </div>
         )}
@@ -478,12 +485,12 @@ function App() {
             Join us in our mission to transform lives and build stronger communities across Kenya.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+            <Link to="/donate" className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
               Donate Today
-            </button>
-            <button className="border-2 border-white text-black px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
+            </Link>
+            <Link to="/volunteer" className="border-2 border-white text-black px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
               Become a Volunteer
-            </button>
+            </Link>
           </div>
 
           {/* Volunteers Section */}
@@ -753,7 +760,12 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
+        </div>
+      } />
+      <Route path="/donate" element={<Donate />} />
+      <Route path="/volunteer" element={<Volunteer />} />
+    </Routes>
++    </BrowserRouter>
   );
 }
 
