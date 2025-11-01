@@ -488,7 +488,7 @@ function App() {
             <Link to="/donate" className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
               Donate Today
             </Link>
-            <Link to="/volunteer" className="border-2 border-white text-black px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
+            <Link to="/volunteer" className="border-2 border-orange-1000 text-black px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
               Become a Volunteer
             </Link>
           </div>
