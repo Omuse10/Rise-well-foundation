@@ -17,6 +17,7 @@ function Navbar() {
         />
         <Link to="/" className="text-left text-lg sm:text-2xl font-black leading-tight text-gray-800 sm:ml-2 mt-6 sm:mt-0">
           Rise-well Foundation
+          <span className="hidden sm:inline">&nbsp;</span>
           <br className="block sm:hidden" />
           Kenya
         </Link>
@@ -31,7 +32,7 @@ function Navbar() {
       </button>
 
       {/* Desktop Navigation */}
-      <div className="hidden sm:flex space-x-4">
+      <div className="hidden sm:flex space-x-4 mr-8 text-gray-800 font-medium">
         <Link to="/" className="hover:text-green-600">
           Home
         </Link>
