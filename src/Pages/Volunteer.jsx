@@ -1,10 +1,12 @@
 import React from "react";
 import HeroSection from "./HeroSection.jsx";
 import Footer from "./Footer.jsx";
+import Navbar from "./Navbar.jsx";
 
 function Volunteer() {
   return (
     <>
+      <Navbar />
       
       <HeroSection
         title="Become a Volunteer 🌟"

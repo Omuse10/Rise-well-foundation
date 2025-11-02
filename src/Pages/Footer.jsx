@@ -78,7 +78,7 @@ function Footer() {
             <h3 className="text-white font-semibold mb-4">Get Involved</h3>
             <ul className="space-y-2">
               <li><a href="#volunteer" className="hover:text-emerald-400 transition-colors">Volunteer</a></li>
-              <li><a href="#partner" className="hover:text-emerald-400 transition-colors">Partner With Us</a></li>
+              <li><a href="#partner" className="hover:text-emerald-400 transition-colors">Donate</a></li>
               <li><a href="#corporate" className="hover:text-emerald-400 transition-colors">Corporate Giving</a></li>
               <li><a href="#reports" className="hover:text-emerald-400 transition-colors">Annual Reports</a></li>
             </ul>

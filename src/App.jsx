@@ -49,16 +49,16 @@ function App() {
       <Route path="/" element={
         <div className="min-h-screen bg-white flex flex-col">
           {/* Navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50">
+      <nav className="bg-white shadow-md p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center sm:items-start ml-2 sm:ml-4 lg:ml-6 sm:space-x-0">
+            <div className="flex flex-row sm:flex-row sm:items-center -ml-6 sm:ml-6">
               <img 
                 src={Logo} 
                 alt="Rise-well Foundation Logo" 
-                className="h-20 w-24 sm:h-24 sm:w-28 mt-2 sm:mt-0 ml-0 sm:ml-0 lg:-ml-2" 
+                className="h-20 w-24 sm:h-24 sm:w-28 object-contain" 
               />
-              <h1 className="text-left sm:text-2xl font-black leading-tight sm:text-left ml-0 sm:ml-0 lg:ml-0 lg:mt-8">
+              <h1 className="text-left text-lg sm:text-2xl font-black leading-tight text-gray-800 sm:ml-2 mt-6 sm:mt-0">
                 Rise-well Foundation Kenya
               </h1>
             </div>
@@ -221,10 +221,9 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Education & Literacy</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Education & Literacy(E-Learning)</h3>
                 <p className="text-gray-600 mb-4">
-                  Providing quality education resources, building schools, and training teachers to ensure 
-                  every child has access to learning opportunities.
+                Empowering students through digital learning, coding, and robotics to inspire creativity, innovation and problem-solving.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                   View Projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -257,10 +256,9 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Economic Empowerment</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Entertainment</h3>
                 <p className="text-gray-600 mb-4">
-                  Supporting small businesses, providing microfinance, and teaching vocational 
-                  skills to help communities become economically self-sufficient.
+                  Providing access to cultural events, promoting arts and crafts, and fostering community engagement.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                   View projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -746,7 +744,7 @@ function App() {
               <h3 className="text-white font-semibold mb-4">Get Involved</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="hover:text-emerald-400 transition-colors">Volunteer</a></li>
-                <li><a href="#" className="hover:text-emerald-400 transition-colors">Partner With Us</a></li>
+                <li><a href="#" className="hover:text-emerald-400 transition-colors">Donate</a></li>
                 <li><a href="#" className="hover:text-emerald-400 transition-colors">Corporate Giving</a></li>
                 <li><a href="#" className="hover:text-emerald-400 transition-colors">Annual Reports</a></li>
               </ul>

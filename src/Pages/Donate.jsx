@@ -1,10 +1,13 @@
 import React from "react";
 import HeroSection from "./HeroSection.jsx";
 import Footer from "./Footer.jsx";
+import Navbar from "./Navbar.jsx";
+
 
 function Donation() {
   return (
     <>
+      <Navbar />
 
       <HeroSection
         title="Support Our Mission 💚"
