@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroSection({ title, description, buttonText, onButtonClick, bgColor, textColor }) {
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-center text-center px-4 ${bgColor || "bg-emerald-50"}`}>
+    <div className={`min-h-screen flex flex-col items-center text-center px-4 pt-12 pb-20 sm:pb-16 md:pb-20 ${bgColor || "bg-emerald-50"}`}>
       <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${textColor || "text-emerald-700"}`}>
         {title}
       </h1>
@@ -19,7 +19,7 @@ function HeroSection({ title, description, buttonText, onButtonClick, bgColor, t
         </button>
       )}
 
-      <p className="text-sm text-gray-500 mt-6">
+      <p className="text-sm sm:text-lg text-gray-500 mt-6">
         Thank you for being part of our journey to transform lives.
       </p>
     </div>
