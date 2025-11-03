@@ -766,7 +766,7 @@ function App() {
       <Route path="/donate" element={<Donate />} />
       <Route path="/volunteer" element={<Volunteer />} />
     </Routes>
-+    </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
