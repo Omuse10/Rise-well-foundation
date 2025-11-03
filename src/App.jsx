@@ -118,8 +118,8 @@ function App() {
             <p className="text-xl md:text-2xl mb-8 text-emerald-100">
               Empowering communities across Kenya through education, healthcare, and sustainable development programs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/donate" className="bg-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 text-center sm:text-left">
+              <Link to="/volunteer" className="bg-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105">
                 Join Our Mission
               </Link>
               <a href="#about" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-emerald-800 transition-all duration-300">

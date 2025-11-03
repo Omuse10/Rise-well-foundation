@@ -20,7 +20,7 @@ function Volunteer() {
        {/* === Simple Volunteer Section (closer to HeroSection) === */}
        <section
         id="volunteer-section"
-        className="bg-emerald-50 -mt-60 sm:-mt-16 md:-mt-24 pb-10" // negative margin to pull section closer
+        className="bg-emerald-50 -mt-60 sm:-mt-24 md:-mt-32 lg:-mt-40 pb-10"// negative margin to pull section closer
       >
        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 bg-white shadow-lg rounded-2xl p-8 w-full overflow-hidden break-words whitespace-normal leading-relaxed">
           <h2 className="text-2xl font-bold text-center mb-6">Become a Volunteer</h2>
