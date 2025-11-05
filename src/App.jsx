@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+//import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Menu, X, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react';
 import Logo from './assets/Logo.png';
 import Donate from './Pages/Donate';
@@ -44,7 +45,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/Rise-well-foundation">
+    <Router> {/*BrowserRouter basename="/Rise-well-foundation">*/}
     <Routes>
       <Route path="/" element={
         <div className="min-h-screen bg-white flex flex-col">
@@ -766,7 +767,7 @@ function App() {
       <Route path="/donate" element={<Donate />} />
       <Route path="/volunteer" element={<Volunteer />} />
     </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
