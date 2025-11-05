@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"; // ✅ for icons
 import Logo from "../assets/logo.png"; // ✅ adjust the path to your logo image
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -64,21 +65,21 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#about" className="hover:text-emerald-400 transition-colors">About Us</a></li>
-              <li><a href="#programs" className="hover:text-emerald-400 transition-colors">Our Programs</a></li>
-              <li><a href="#impact" className="hover:text-emerald-400 transition-colors">Impact Stories</a></li>
-              <li><a href="#team" className="hover:text-emerald-400 transition-colors">Our Team</a></li>
-            </ul>
+              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><Link to="/" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
+                <li><a href="/" className="hover:text-emerald-400 transition-colors">Our Programs</a></li>
+                <li><a href="/" className="hover:text-emerald-400 transition-colors">Impact Stories</a></li>
+                <li><a href="/" className="hover:text-emerald-400 transition-colors">Our Team</a></li>
+              </ul>
           </div>
 
           {/* Get Involved */}
           <div>
             <h3 className="text-white font-semibold mb-4">Get Involved</h3>
             <ul className="space-y-2">
-              <li><a href="#volunteer" className="hover:text-emerald-400 transition-colors">Volunteer</a></li>
-              <li><a href="#partner" className="hover:text-emerald-400 transition-colors">Donate</a></li>
+              <li><Link to="/volunteer" className="hover:text-emerald-400 transition-colors">Volunteer</Link></li>
+              <li><Link to="/donate" className="hover:text-emerald-400 transition-colors">Donate</Link></li>
               <li><a href="#corporate" className="hover:text-emerald-400 transition-colors">Corporate Giving</a></li>
               <li><a href="#reports" className="hover:text-emerald-400 transition-colors">Annual Reports</a></li>
             </ul>
