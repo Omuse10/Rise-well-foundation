@@ -536,7 +536,7 @@ function App() {
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="https://via.placeholder.com/150" // Replace with Luca's image URL
+                    src="https://i.postimg.cc/SsPrp97w/Whats-App-Image-2025-11-04-at-10-06-16-PM.jpg" // Replace with Luca's image URL
                     alt="Luca" 
                     className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                   />
