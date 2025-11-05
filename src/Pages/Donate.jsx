@@ -1,8 +1,14 @@
-import React from "react";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
+import React, { useState } from "react";
 
 function Donation() {
+  // State to hold selected or custom amount as a string (numeric only)
+  const [selectedAmount, setSelectedAmount] = useState("");
+
+  // Helper to convert amount string like "$25" to number 25
+  const parseAmount = (amount) => Number(amount.replace("$", ""));
+
   return (
     <>
       <Navbar />
@@ -42,7 +48,12 @@ function Donation() {
                     <button
                       key={amount}
                       type="button"
-                      className="bg-white border border-gray-300 rounded-lg py-2 font-semibold hover:bg-green-100 transition"
+                      className={`bg-white border rounded-lg py-2 font-semibold hover:bg-green-100 transition ${
+                        parseAmount(amount) === Number(selectedAmount)
+                          ? "border-green-600 bg-green-200"
+                          : "border-gray-300"
+                      }`}
+                      onClick={() => setSelectedAmount(parseAmount(amount))}
                     >
                       {amount}
                     </button>
@@ -57,6 +68,12 @@ function Donation() {
                   type="text"
                   placeholder="Enter your amount"
                   className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+                  value={selectedAmount}
+                  onChange={(e) => {
+                    // Only allow numeric input
+                    const val = e.target.value.replace(/\D/g, "");
+                    setSelectedAmount(val);
+                  }}
                 />
               </div>
 

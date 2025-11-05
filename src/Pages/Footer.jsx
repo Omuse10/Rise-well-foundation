@@ -29,7 +29,7 @@ function Footer() {
             {/* Social links */}
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/risewellfoundation"
+                href="https://www.facebook.com/profile.php?id=61583136432986"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors"
@@ -37,7 +37,7 @@ function Footer() {
                 <Facebook className="h-5 w-5 text-white" />
               </a>
               <a
-                href="https://www.instagram.com/risewellfoundation"
+                href="https://www.instagram.com/rise.wellorg/?next=%2F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors"
@@ -45,7 +45,7 @@ function Footer() {
                 <Instagram className="h-5 w-5 text-white" />
               </a>
               <a
-                href="https://www.twitter.com/@risewellfoundation"
+                href="https://x.com/RisewellK34553"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors"
@@ -53,7 +53,7 @@ function Footer() {
                 <Twitter className="h-5 w-5 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/@risewellfoundation"
+                href="https://www.linkedin.com/in/rise-well-b70597397/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors"

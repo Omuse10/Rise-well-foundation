@@ -77,26 +77,69 @@ function Volunteer() {
 
               {/* Areas of Interest */}
               <div className="mb-8">
-                <label className="block text-sm font-semibold mb-2">Areas of Interest</label>
-                <div className="flex flex-col space-y-2">
-                  {[
-                    "Community Outreach",
-                    "Mental Health",
-                    "Fundraising",
-                    "Digital Marketing",
-                    "Social Media Management",
-                  ].map((area, index) => (
-                    <label key={index} className="inline-flex items-center">
-                      <input
-                        type="checkbox"
-                        className="form-checkbox h-5 w-5 text-green-500"
-                      />
-                      <span className="ml-2">{area}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+                    <label className="block text-sm font-semibold mb-2">Areas of Interest</label>
+                    <div className="flex flex-col space-y-4">
 
+
+                      {/* Tech Field Subtitle */}
+                      <span className="text-xs text-gray-600 font-bold mb-1">Tech</span>
+                      <div className="flex flex-col space-y-2">
+                        {[
+                          "Arduino Programming",
+                          "3D Printing",
+                          "Web Development",
+                          "Programming",
+                        ].map((area, index) => (
+                          <label key={index} className="inline-flex items-center">
+                            <input
+                              type="checkbox"
+                              className="form-checkbox h-5 w-5 accent-green-700" //text-green-500 its for tailwind v2 not supported on some modern versions of browsers
+                            />
+                            <span className="ml-2">{area}</span>
+                          </label>
+                        ))}
+                      </div>
+
+
+                      {/* Health Field Subtitle */}
+                      <span className="text-xs text-gray-600 font-bold mt-4 mb-1">Health</span>
+                      <div className="flex flex-col space-y-2">
+                        {[
+                          "Nutrition",
+                          "Meditation",
+                          "Mental Health Support",
+                        ].map((area) => (
+                          <label key={area} className="inline-flex items-center">
+                            <input
+                              type="checkbox"
+                              className="form-checkbox h-5 w-5 accent-green-700" //using the accent-green-500 class here modern browser support
+                            />
+                            <span className="ml-2">{area}</span>
+                          </label>
+                        ))}
+                      </div>
+
+
+                      {/* Entertainment Field Subtitle */}
+                      <span className="text-xs text-gray-600 font-bold mt-4 mb-1">Entertainment</span>
+                      <div className="flex flex-col space-y-2">
+                        {[
+                          "Music",
+                          "Drama",
+                          "Art",
+                        ].map((area) => (
+                          <label key={area} className="inline-flex items-center">
+                            <input
+                              type="checkbox"
+                              className="form-checkbox h-5 w-5 accent-green-700"
+                            />
+                            <span className="ml-2">{area}</span>
+                          </label>
+                        ))}
+                      </div>
+                      {/* Add other categories here */}
+                    </div>
+                  </div>
               {/* Submit Button */}
               <button
                 type="submit"
