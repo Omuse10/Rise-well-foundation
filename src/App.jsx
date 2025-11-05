@@ -718,10 +718,10 @@ function App() {
                 that empower local leaders and foster long-term growth.
               </p>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61583136432986" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                   <Facebook className="h-5 w-5 text-white" />
                 </a>
-                <a href="https://www.instagram.com/risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                <a href="https://www.instagram.com/rise.wellorg/?next=%2F" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                   <Instagram className="h-5 w-5 text-white" />
                 </a>
                 <a href="https://www.twitter.com/@risewellfoundation" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
