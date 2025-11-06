@@ -525,7 +525,7 @@ function App() {
                     className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                   />
                   <div>
-                    <h4 className="text-xl font-semibold">Zeyad</h4>
+                    <h4 className="text-xl font-semibold">Zeyad Ghulam</h4>
                   </div>
                 </div>
                 <p className="text-gray-600">
