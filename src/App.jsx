@@ -1,11 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-//import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+//import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Menu, X, Target, Mail, Phone, MapPin, ArrowRight, Globe, Star, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react';
 import Logo from './assets/Logo.png';
 import Donate from './Pages/Donate';
 import Volunteer from './Pages/Volunteer';
+import { HashLink } from 'react-router-hash-link';
+
 
 
 function App() {
@@ -45,7 +47,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/Rise-well-foundation"> {/*BrowserRouter basename="/Rise-well-foundation">*/}
+    <Router> {/*BrowserRouter basename="/Rise-well-foundation">*/}
     <Routes>
       <Route path="/" element={
         <div className="min-h-screen bg-white flex flex-col">
@@ -69,12 +71,13 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-emerald-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-emerald-600 transition-colors">About</a>
-              <a href="#programs" className="text-gray-700 hover:text-emerald-600 transition-colors">Programs</a>
-              <a href="#impact" className="text-gray-700 hover:text-emerald-600 transition-colors">Impact</a>
-              <a href="#team" className="text-gray-700 hover:text-emerald-600 transition-colors">Team</a>
-              <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
+              <HashLink smooth to="/#home" className="text-gray-700 hover:text-emerald-600 transition-colors">Home</HashLink>
+              <HashLink smooth to="/#about" className="text-gray-700 hover:text-emerald-600 transition-colors">About</HashLink>
+              <HashLink smooth to="/#programs" className="text-gray-700 hover:text-emerald-600 transition-colors">Programs</HashLink>
+              <HashLink smooth to="/#impact" className="text-gray-700 hover:text-emerald-600 transition-colors">Impact</HashLink>
+              <HashLink smooth to="/#team" className="text-gray-700 hover:text-emerald-600 transition-colors">Team</HashLink>
+              <HashLink smooth to="/#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact</HashLink>
+
               <Link to="/donate" className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
                 Donate Now
               </Link>
@@ -93,13 +96,13 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Home</a>
-              <a href="#about" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">About</a>
-              <a href="#programs" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Programs</a>
-              <a href="#impact" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Impact</a>
-              <a href="#team" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Team</a>
-              <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Contact</a>
-              <Link to="/donate" className="w-full text-left bg-orange-600 text-white px-3 py-2 rounded-md hover:bg-orange-700 transition-colors">
+              <HashLink smooth to="/#home" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Home</HashLink>
+              <HashLink smooth to="/#about" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">About</HashLink>
+              <HashLink smooth to="/#programs" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Programs</HashLink>
+              <HashLink smooth to="/#impact" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Impact</HashLink>
+              <HashLink smooth to="/#team" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Team</HashLink>
+              <HashLink smooth to="/#contact" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Contact</HashLink>
+              <Link to="/donate" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">
                 Donate Now
               </Link>
             </div>
@@ -737,10 +740,11 @@ function App() {
             <div>
               <h3 className="text-white font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#about" className="hover:text-emerald-400 transition-colors">About Us</a></li>
-                <li><a href="#programs" className="hover:text-emerald-400 transition-colors">Our Programs</a></li>
-                <li><a href="#impact" className="hover:text-emerald-400 transition-colors">Impact Stories</a></li>
-                <li><a href="#team" className="hover:text-emerald-400 transition-colors">Our Team</a></li>
+                <li><HashLink smooth to="/#about" className="hover:text-emerald-400 transition-colors">About Us</HashLink></li>
+                <li><HashLink smooth to="/#programs" className="hover:text-emerald-400 transition-colors">Our Programs</HashLink></li>
+                <li><HashLink smooth to="/#impact" className="hover:text-emerald-400 transition-colors">Impact Stories</HashLink></li>
+                <li><HashLink smooth to="/#team" className="hover:text-emerald-400 transition-colors">Our Team</HashLink></li>
+
               </ul>
             </div>
 
@@ -767,7 +771,7 @@ function App() {
       <Route path="/donate" element={<Donate />} />
       <Route path="/volunteer" element={<Volunteer />} />
     </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
