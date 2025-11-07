@@ -102,7 +102,7 @@ function App() {
               <HashLink smooth to="/#impact" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Impact</HashLink>
               <HashLink smooth to="/#team" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Team</HashLink>
               <HashLink smooth to="/#contact" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">Contact</HashLink>
-              <Link to="/donate" onClick={toggleMenu} className="block px-3 py-2 text-gray-700 hover:text-emerald-600">
+              <Link to="/donate" onClick={toggleMenu} className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
                 Donate Now
               </Link>
             </div>

@@ -67,10 +67,14 @@ function Footer() {
           <div>
               <h3 className="text-white font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><Link to="/" className="hover:text-emerald-400 transition-colors">About Us</Link></li>
-                <li><a href="/" className="hover:text-emerald-400 transition-colors">Our Programs</a></li>
-                <li><a href="/" className="hover:text-emerald-400 transition-colors">Impact Stories</a></li>
-                <li><a href="/" className="hover:text-emerald-400 transition-colors">Our Team</a></li>
+                <li><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    className="hover:text-emerald-400 transition-colors">About Us</Link></li>
+                <li><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    className="hover:text-emerald-400 transition-colors">Our Programs</Link></li>
+                <li><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    className="hover:text-emerald-400 transition-colors">Impact Stories</Link></li>
+                <li><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    className="hover:text-emerald-400 transition-colors">Our Team</Link></li>
               </ul>
           </div>
 
