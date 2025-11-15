@@ -473,7 +473,7 @@ function App() {
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Paul Oyindo</h3>
-              <p className="text-emerald-600 font-medium mb-3">Entertainment coordinator</p>
+              <p className="text-emerald-600 font-medium mb-3">Director of programms</p>
               <p className="text-gray-600 text-sm">
               Creative and energetic in planning, organizing, and managing entertainment activities that bring people together and make every event lively and engaging.
               </p>
