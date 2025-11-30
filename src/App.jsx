@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 //import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
@@ -8,7 +8,11 @@ import Donate from './Pages/Donate';
 import Volunteer from './Pages/Volunteer';
 import { HashLink } from 'react-router-hash-link';
 
-
+const heroImages = [
+  'https://i.postimg.cc/yYSDYWdK/Joy.jpg', // Replace with your image URLs
+  'https://i.postimg.cc/ry7S9BRq/Bons.jpg',
+  'https://i.postimg.cc/rmKr1j8b/peaceful-eyes.jpg',
+];
 
 function App() {
   const form = useRef(null);
@@ -21,6 +25,15 @@ function App() {
   });
 
   const [state, handleSubmit] = useForm("myzbwval"); // Replace "myzbwval" with your Formspree form ID
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -111,7 +124,16 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-[#DB9F75] to-[#FFDAB9] text-white"> {/* Updated gradient colors */}
+      <section
+        id="home"
+        className="relative text-white"
+        style={{
+          backgroundImage: `url(${heroImages[currentImageIndex]})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transition: 'background-image 1s ease-out',
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
@@ -167,13 +189,10 @@ function App() {
                 Building a Better Kenya, One Community at a Time
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Rise-well Foundation Kenya was established with a vision to create lasting positive change 
-                in communities across Kenya. We believe that sustainable development starts from within 
-                communities, empowering local leaders and fostering self-reliance.
+              RiseWell Foundation is a home of healing, creativity, and innovation—a place where young people can be seen, heard, and supported. We exist to ensure no one faces trauma alone and to empower a generation of artists, innovators, and emotionally healthy youth who can shape Africa with confidence. Through our three pillars—The Arts, Clean Mind (mental health & wellness), and Technology—we provide safe spaces for creative expression, access to mental health support, and hands-on tech skills like coding, 3D printing, and digital entrepreneurship. Guided by fairness and empowerment, RiseWell nurtures talent, builds resilience, and creates opportunities so every child can thrive, not just survive.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Our comprehensive approach combines education, healthcare, economic empowerment, and 
-                environmental conservation to address the root causes of poverty and inequality.
+              Our approach combines education, mental health support, creative arts, and technology-driven skill-building to empower communities and tackle the root causes of poverty and inequality.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="bg-emerald-100 p-3 rounded-full">
@@ -230,7 +249,7 @@ function App() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Education & Literacy(E-Learning)</h3>
                 <p className="text-gray-600 mb-4">
-                Empowering students through digital learning, coding, and robotics to inspire creativity, innovation and problem-solving.
+                Empowering students through digital learning, graphic design, coding, robotics, and hands-on 3D printing to spark creativity, drive innovation, and strengthen real-world problem-solving skills.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                   View Projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -247,8 +266,7 @@ function App() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Healthcare Access</h3>
                 <p className="text-gray-600 mb-4">
-                  Establishing health clinics, providing medical supplies, and training community 
-                  health workers to improve healthcare access in rural areas.
+                Rise-Well improves community well-being by providing accessible mental health support, offering safe counseling spaces, training local helpers, and promoting awareness to reduce stigma. Our goal is to strengthen resilience and ensure people get the help they need.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                   View projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -265,7 +283,7 @@ function App() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Entertainment</h3>
                 <p className="text-gray-600 mb-4">
-                  Providing access to cultural events, promoting arts and crafts, and fostering community engagement.
+                Empowering upcoming artists through teaching and providing access to a community music studio, photography and videography resources, and other creative tools. Rise-Well also supports cultural events, promotes local arts and crafts, and fosters community engagement to inspire expression, talent development, and shared cultural pride..
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                   View projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -296,8 +314,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "Rise-well Foundation helped us build a clean water well in our village. Now our children 
-                don't have to walk 5 kilometers for water and can focus on their education instead."
+              "Thanks to Rise-Well Foundation, we learned robotics and Arduino and built a secure door lock system. Now our community spaces are safer, and we feel empowered using the technology we learned."
               </p>
               <div className="flex items-center">
                 <img 
@@ -321,8 +338,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "Thanks to the Rise-well Foundation, we now have access to affordable healthcare. The mobile 
-                clinic visits have saved countless lives in our community."
+              "Thanks to Rise-Well Foundation, we now have access to mental health support. The mobile clinic has made it easier for our community to get help when needed."
               </p>
               <div className="flex items-center">
                 <img 
@@ -346,8 +362,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "The Rise-well vocational training program gave me the skills to start my own carpentry business. 
-                I am now able to provide for my family and train others in the community."
+              "Thanks to the Rise-Well program, I learned new skills in carpentry and making things with my hands. Now I can create projects on my own and even teach my friends what I’ve learned!"
               </p>
               <div className="flex items-center">
                 <img 
@@ -371,8 +386,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "The vocational training program gave me the skills to start my own tailoring business. 
-                I can now support my family and employ three other women from our community."
+              "Thanks to the Rise-Well program, I learned how to design and 3D print cool items. Now I can create my own projects and even show my friends how to make their own 3D creations!"
               </p>
               <div className="flex items-center">
                 <img 
@@ -416,7 +430,7 @@ function App() {
 
             <div className="text-center">
               <img 
-                src="https://i.postimg.cc/YCvk7phZ/IMG-20250126-WA0004.jpg" 
+                src="https://i.postimg.cc/c4wKmV0Q/Whats-App-Image-2025-11-21-at-9-25-34-PM.jpg" 
                 alt="Program Manager" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
