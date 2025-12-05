@@ -10,8 +10,8 @@ import { HashLink } from 'react-router-hash-link';
 
 const heroImages = [
   'https://i.postimg.cc/yYSDYWdK/Joy.jpg', // Replace with your image URLs
-  'https://i.postimg.cc/ry7S9BRq/Bons.jpg',
-  'https://i.postimg.cc/rmKr1j8b/peaceful-eyes.jpg',
+  'https://i.postimg.cc/K8DXvjfp/DSC-0417.jpg',
+  'https://i.postimg.cc/C5288w4W/IMG-2041-Original-Copy.jpg',
 ];
 
 function App() {
@@ -242,7 +242,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                src="https://i.postimg.cc/Dyjhq8LS/IMG-8189-Copy.jpg" 
                 alt="Education program" 
                 className="w-full h-48 object-cover"
               />
@@ -259,7 +259,7 @@ function App() {
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.pexels.com/photos/6647093/pexels-photo-6647093.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                src="https://i.postimg.cc/QNBN0gNw/Mental-Health-E-Book.jpg" 
                 alt="Healthcare program" 
                 className="w-full h-48 object-cover"
               />
@@ -276,7 +276,7 @@ function App() {
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.pexels.com/photos/6646967/pexels-photo-6646967.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                src="https://i.postimg.cc/L6rCKSp6/IMG-8297.jpg" 
                 alt="Economic empowerment" 
                 className="w-full h-48 object-cover"
               />
@@ -520,7 +520,7 @@ function App() {
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="https://via.placeholder.com/150" // Replace with Saad's image URL
+                    src="https://i.postimg.cc/8CCrZF08/Whats-App-Image-2025-12-02-at-10-03-50-PM.jpg" // Replace with Saad's image URL
                     alt="Al-Adhami, Saad" 
                     className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                   />
