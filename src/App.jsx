@@ -9,7 +9,6 @@ import Volunteer from './Pages/Volunteer';
 import { HashLink } from 'react-router-hash-link';
 
 const heroImages = [
-  'https://i.postimg.cc/FFYL8LM2/Whats-App-Image-2025-12-07-at-7-21-14-PM.jpg', // Replace with your image URLs
   'https://i.postimg.cc/8cH6mRJc/IMG-3094.jpg', // Replace with your image URLs
   'https://i.postimg.cc/K8DXvjfp/DSC-0417.jpg',
   'https://i.postimg.cc/C5288w4W/IMG-2041-Original-Copy.jpg',
@@ -543,7 +542,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="https://i.postimg.cc/8CCrZF08/Whats-App-Image-2025-12-02-at-10-03-50-PM.jpg" // Replace with Saad's image URL
+                    src="https://i.postimg.cc/FFYL8LM2/Whats-App-Image-2025-12-07-at-7-21-14-PM.jpg" // Replace with Saad's image URL
                     alt="Al-Adhami, Saad" 
                     className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                   />
