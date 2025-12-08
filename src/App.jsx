@@ -9,9 +9,11 @@ import Volunteer from './Pages/Volunteer';
 import { HashLink } from 'react-router-hash-link';
 
 const heroImages = [
-  'https://i.postimg.cc/yYSDYWdK/Joy.jpg', // Replace with your image URLs
+  'https://i.postimg.cc/FFYL8LM2/Whats-App-Image-2025-12-07-at-7-21-14-PM.jpg', // Replace with your image URLs
+  'https://i.postimg.cc/8cH6mRJc/IMG-3094.jpg', // Replace with your image URLs
   'https://i.postimg.cc/K8DXvjfp/DSC-0417.jpg',
   'https://i.postimg.cc/C5288w4W/IMG-2041-Original-Copy.jpg',
+  'https://i.postimg.cc/NF14q2yg/DSC-0175.jpg',
 ];
 
 function App() {
@@ -189,7 +191,27 @@ function App() {
                 Building a Better Kenya, One Community at a Time
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-              RiseWell Foundation is a home of healing, creativity, and innovation—a place where young people can be seen, heard, and supported. We exist to ensure no one faces trauma alone and to empower a generation of artists, innovators, and emotionally healthy youth who can shape Africa with confidence. Through our three pillars—The Arts, Clean Mind (mental health & wellness), and Technology—we provide safe spaces for creative expression, access to mental health support, and hands-on tech skills like coding, 3D printing, and digital entrepreneurship. Guided by fairness and empowerment, RiseWell nurtures talent, builds resilience, and creates opportunities so every child can thrive, not just survive.
+RiseWell Foundation is a sanctuary of healing, creativity, and innovation.
+It is a place where young people are truly seen, heard, and supported. It is where no child walks through trauma alone, and every dream has room to grow.
+
+We exist to raise a new generation of emotionally healthy youth, confident innovators, and creative change makers who will shape the future of Kenya and Africa. Guided by fairness, dignity, and empowerment, RiseWell opens doors for every child to thrive, not just survive.
+
+Through our three core pillars:
+
+<p><h3 className="font-semibold text-gray-900">⁠The Arts</h3></p>
+
+A safe space for self-expression, storytelling, and creative freedom through music, dance, painting, and performance.
+
+<p><h3 className="font-semibold text-gray-900">⁠Clean Mind (Mental Health & Wellness)</h3></p>
+
+Access to compassionate counseling, mental wellness education, and emotional support to build resilience and inner strength.
+
+<p><h3 className="font-semibold text-gray-900">⁠Technology</h3></p>
+
+Hands-on digital learning, from coding and 3D printing to digital entrepreneurship which equips youth with skills for today’s world and tomorrow’s opportunities.
+
+Together, these pillars cultivate talent, restore hope, and create opportunities that break the cycle of poverty and inequality. RiseWell’s holistic approach blends education, mental health, creative expression, and tech-driven skill building to uplift entire communities, one life at a time.
+
               </p>
               <p className="text-lg text-gray-600 mb-8">
               Our approach combines education, mental health support, creative arts, and technology-driven skill-building to empower communities and tackle the root causes of poverty and inequality.
@@ -200,7 +222,8 @@ function App() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Our Mission</h3>
-                  <p className="text-gray-600">To empower communities through sustainable programs that promote education, health, and economic growth.</p>
+                  <p className="text-gray-600">To empower communities through sustainable programs that expand access to education, mental wellness, and economic opportunity, building foundations for long-term growth and dignity.
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-4 mt-6">
@@ -210,7 +233,7 @@ function App() {
                 <div>
                   <h3 className="font-semibold text-gray-900">Our Vision</h3>
                   <p className="text-gray-600">Our Vision
-                  To build a self-reliant and thriving society where every individual has the opportunity to learn, live healthy, and prosper.</p>
+                  To build a self-reliant, thriving society where every individual has the chance to learn, create, stay healthy, and prosper.</p>
                 </div>
               </div>
             </div>
@@ -318,7 +341,7 @@ function App() {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://images.pexels.com/photos/8815985/pexels-photo-8815985.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                  src="https://i.postimg.cc/T1R9xYnT/IMG-1989.avif" 
                   alt="Community leader" 
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
@@ -342,13 +365,13 @@ function App() {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://images.pexels.com/photos/8815516/pexels-photo-8815516.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                  src="https://i.postimg.cc/hjbjkVLs/IMG-8849-Copy.avif" 
                   alt="Community member" 
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
                   <div className="font-semibold text-gray-900">Grace Mwende</div>
-                  <div className="text-gray-600">Community Health Advocate, Machakos</div>
+                  <div className="text-gray-600">Student, Machakos</div>
                 </div>
               </div>
             </div>
@@ -366,13 +389,13 @@ function App() {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://images.pexels.com/photos/8815149/pexels-photo-8815149.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                  src="https://i.postimg.cc/sx600Zqq/IMG-8199-Copy.avif" 
                   alt="Program beneficiary" 
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
                   <div className="font-semibold text-gray-900">John Kamau</div>
-                  <div className="text-gray-600">Carpenter, Eldoret</div>
+                  <div className="text-gray-600">Student, Eldoret</div>
                 </div>
               </div>
             </div>
@@ -390,7 +413,7 @@ function App() {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://images.pexels.com/photos/8815516/pexels-photo-8815516.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                  src="https://i.postimg.cc/dVd4GXQJ/IMG-6455.avif" 
                   alt="Program beneficiary" 
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
@@ -443,7 +466,7 @@ function App() {
 
             <div className="text-center">
               <img 
-                src="https://i.postimg.cc/FKxSQgfM/Whats-App-Image-2025-10-23-at-11-36-35-AM.jpg" 
+                src="https://i.postimg.cc/cHVpBzts/(7).jpg" 
                 alt="Community Coordinator" 
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
               />
@@ -537,7 +560,7 @@ function App() {
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="https://via.placeholder.com/150" // Replace with Zeyad's image URL
+                    src="https://i.postimg.cc/cHVpBzts/(7).jpg" // Replace with Zeyad's image URL
                     alt="Zeyad" 
                     className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                   />
@@ -571,7 +594,7 @@ function App() {
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="https://via.placeholder.com/150" // Replace with Yasmine's image URL
+                    src="https://i.postimg.cc/W3hDkd0j/(8).jpg" // Replace with Yasmine's image URL
                     alt="Yasmine" 
                     className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                   />
