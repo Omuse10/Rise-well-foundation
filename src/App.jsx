@@ -154,9 +154,9 @@ function App() {
                 <Link to="/volunteer" className="bg-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105">
                   Join Our Mission
                 </Link>
-                <a href="#about" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-emerald-800 transition-all duration-300">
+                <HashLink smooth to="/#about" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-emerald-800 transition-all duration-300">
                   Learn More
-                </a>
+                </HashLink>
               </div>
             </div>
           </div>
