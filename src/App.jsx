@@ -295,9 +295,9 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   <p className="text-gray-600 mb-4">
                   Rise-Well improves community well-being by providing accessible mental health support, offering safe counseling spaces, training local helpers, and promoting awareness to reduce stigma. Our goal is to strengthen resilience and ensure people get the help they need.
                   </p>
-                  <Link to="/mental-health-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
+                  {/* <Link to="/mental-health-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                     View Projects <ArrowRight className="h-4 w-4 ml-1" />
-                  </Link>
+                  </Link>*/}
                 </div>
               </div>
 

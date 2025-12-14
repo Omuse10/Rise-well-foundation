@@ -5,34 +5,34 @@ import Footer from "./Footer.jsx";
 const EntertainmentProjects = () => {
   const entertainmentProjects = [
     {
-      title: 'Robotics and Arduino',
-      description: 'Learn how to build and program robots using Arduino technology.',
-      image: 'https://i.postimg.cc/Dyjhq8LS/IMG-8189-Copy.jpg',
+      title: 'Podcasting and Singing',
+      description: 'We provide a platform for kids to express their creativity through podcasting and singing.',
+      image: 'https://i.postimg.cc/Y0yXcDnZ/IMG-9889-Copy.jpg',
     },
     {
-      title: '3D Printing',
-      description: 'Hands-on experience with 3D printing to create innovative designs.',
+      title: 'Acrobatics',
+      description: 'We encourage kids to take part in acrobatic activities to build strength, balance, flexibility, and confidence in a fun and safe way..',
       image: 'https://i.postimg.cc/L6rCKSp6/IMG-8297.jpg',
     },
     {
-      title: 'Digital Entrepreneurship',
-      description: 'Empowering youth with skills to thrive in the digital economy.',
-      image: 'https://i.postimg.cc/QNBN0gNw/Mental-Health-E-Book.jpg',
+      title: 'Painting and Crafts',
+      description: 'We provide a space for kids to express their creativity through painting and crafts.',
+      image: 'https://i.postimg.cc/br2ybWtQ/20221205-124314.jpg',
     },
     {
-      title: 'Mental Health Awareness',
-      description: 'Promoting mental health awareness and providing resources for youth.',
+      title: 'Boxing',
+      description: 'Boxing classes to teach discipline, self-defense, and physical fitness in a supportive environment.',
       image: 'https://i.postimg.cc/8cH6mRJc/IMG-3094.jpg',
     },
     {
-      title: 'Tech Career Guidance',
-      description: 'Providing guidance and resources for youth interested in tech careers.',
-      image: 'https://i.postimg.cc/NF14q2yg/DSC-0175.jpg',
+      title: 'Music and Arts',
+      description: 'Fostering creativity and self-expression through music and arts programs for kids.',
+      image: 'https://i.postimg.cc/DwQqLYrq/IMG-9667-Copy-2.avif',
     },
     {
-      title: 'Robotics and Arduino',
-      description: 'Learn how to build and program robots using Arduino technology.',
-      image: 'https://i.postimg.cc/Dyjhq8LS/IMG-8189-Copy.jpg',
+      title: 'Dance and Drama',
+      description: 'We provide a platform for kids to express their creativity through dance and drama.',
+      image: 'https://i.postimg.cc/NF14q2yg/DSC-0175.jpg',
     },
   ];
 
