@@ -8,6 +8,9 @@ import Donate from './Pages/Donate';
 import Volunteer from './Pages/Volunteer';
 import { HashLink } from 'react-router-hash-link';
 import ScrollToTop from './ScrollToTop';
+import TechProjects from './Pages/TechProjects';
+import MentalHealthProjects from './Pages/MentalHealthProjects';
+import EntertainmentProjects from './Pages/EntertainmentProjects';
 
 const heroImages = [
   'https://i.postimg.cc/8cH6mRJc/IMG-3094.jpg', // Replace with your image URLs
@@ -275,9 +278,9 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   <p className="text-gray-600 mb-4">
                   Empowering students through digital learning, graphic design, coding, robotics, and hands-on 3D printing to spark creativity, drive innovation, and strengthen real-world problem-solving skills.
                   </p>
-                  <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
+                  <Link to="/tech-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                     View Projects <ArrowRight className="h-4 w-4 ml-1" />
-                  </button>
+                  </Link>
                 </div>
               </div>
 
@@ -292,9 +295,9 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   <p className="text-gray-600 mb-4">
                   Rise-Well improves community well-being by providing accessible mental health support, offering safe counseling spaces, training local helpers, and promoting awareness to reduce stigma. Our goal is to strengthen resilience and ensure people get the help they need.
                   </p>
-                  <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
-                    View projects <ArrowRight className="h-4 w-4 ml-1" />
-                  </button>
+                  <Link to="/mental-health-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
+                    View Projects <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </div>
               </div>
 
@@ -309,9 +312,9 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   <p className="text-gray-600 mb-4">
                   Empowering upcoming artists through teaching and providing access to a community music studio, photography and videography resources, and other creative tools. Rise-Well also supports cultural events, promotes local arts and crafts, and fosters community engagement to inspire expression, talent development, and shared cultural pride..
                   </p>
-                  <button className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
-                    View projects <ArrowRight className="h-4 w-4 ml-1" />
-                  </button>
+                  <Link to="/entertainment-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
+                    View Projects <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -808,6 +811,9 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
         } />
         <Route path="/donate" element={<Donate />} />
         <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/tech-projects" element={<TechProjects />} />
+        <Route path="/mental-health-projects" element={<MentalHealthProjects />} />
+        <Route path="/entertainment-projects" element={<EntertainmentProjects />} />
       </Routes>
     </Router>
   );
