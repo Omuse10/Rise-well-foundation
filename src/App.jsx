@@ -449,7 +449,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Victor Kibe</h3>
-                <p className="text-emerald-600 font-medium mb-3">Chief Executive Director(Co-Founder)</p>
+                <p className="text-emerald-600 font-medium mb-3">Chief Executive Director(Founder)</p>
                 <p className="text-gray-600 text-sm">
                 Responsible for guiding the organization’s strategic direction, overseeing operations, and working with the team to achieve its mission and long-term goals.
                 </p>
@@ -462,7 +462,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Geoffrey Omuse</h3>
-                <p className="text-emerald-600 font-medium mb-3">ICT Manager(Co-Founder)</p>
+                <p className="text-emerald-600 font-medium mb-3">ICT Manager</p>
                 <p className="text-gray-600 text-sm">
                 Skilled in managing technology systems, website development, and IT solutions that support the organization’s digital growth and innovation.
                 </p>
@@ -475,7 +475,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Gregory Isaac</h3>
-                <p className="text-emerald-600 font-medium mb-3">Organising Secretary(Co-Founder)</p>
+                <p className="text-emerald-600 font-medium mb-3">Organising Secretary</p>
                 <p className="text-gray-600 text-sm">
                 Efficient in planning, coordinating, and managing organizational activities, ensuring smooth operations and effective communication within the team.
                 </p>
@@ -488,7 +488,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Isaac Arabu</h3>
-                <p className="text-emerald-600 font-medium mb-3">ICT Specialist(Co-Founder)</p>
+                <p className="text-emerald-600 font-medium mb-3">ICT Specialist</p>
                 <p className="text-gray-600 text-sm">
                 Enthusiastic about robotics and technology integration, driving innovation through creative tech solutions that enhance learning and digital advancement within the organization
                 </p>
@@ -514,7 +514,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Paul Oyindo</h3>
-                <p className="text-emerald-600 font-medium mb-3">Director of programms(Co-Founder)</p>
+                <p className="text-emerald-600 font-medium mb-3">Director of programms</p>
                 <p className="text-gray-600 text-sm">
                 Creative and energetic in planning, organizing, and managing entertainment activities that bring people together and make every event lively and engaging.
                 </p>
