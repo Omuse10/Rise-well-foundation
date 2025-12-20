@@ -5,18 +5,18 @@ import Footer from "./Footer.jsx";
 const EntertainmentProjects = () => {
   const entertainmentProjects = [
     {
-      title: 'Podcasting and Singing',
-      description: 'We provide a platform for kids to express their creativity through podcasting and singing.',
+      title: 'Music Production and Media',
+      description: 'We provide a platform for youths to express their creativity through podcasting and singing.',
       image: 'https://i.postimg.cc/Y0yXcDnZ/IMG-9889-Copy.jpg',
     },
     {
-      title: 'Acrobatics',
-      description: 'We encourage kids to take part in acrobatic activities to build strength, balance, flexibility, and confidence in a fun and safe way..',
+      title: 'Acting club and Stage Play',
+      description: 'We encourage youths to develop their acting skills in a fun and safe way.',
       image: 'https://i.postimg.cc/L6rCKSp6/IMG-8297.jpg',
     },
     {
       title: 'Painting and Crafts',
-      description: 'We provide a space for kids to express their creativity through painting and crafts.',
+      description: 'We provide a space for youths to express their creativity through painting and crafts.',
       image: 'https://i.postimg.cc/br2ybWtQ/20221205-124314.jpg',
     },
     {
@@ -25,13 +25,13 @@ const EntertainmentProjects = () => {
       image: 'https://i.postimg.cc/8cH6mRJc/IMG-3094.jpg',
     },
     {
-      title: 'Music and Arts',
-      description: 'Fostering creativity and self-expression through music and arts programs for kids.',
+      title: 'Film Making and Photography',
+      description: 'Fostering creativity and self-expression through Filming and photography for Youths.',
       image: 'https://i.postimg.cc/DwQqLYrq/IMG-9667-Copy-2.avif',
     },
     {
-      title: 'Dance and Drama',
-      description: 'We provide a platform for kids to express their creativity through dance and drama.',
+      title: 'Dance and Fashion',
+      description: 'We provide a platform for youths to express their creativity through dance and Fashion.',
       image: 'https://i.postimg.cc/NF14q2yg/DSC-0175.jpg',
     },
   ];

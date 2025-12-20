@@ -226,7 +226,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Our Mission</h3>
-                    <p className="text-gray-600">To empower communities through sustainable programs that expand access to education, mental wellness, and economic opportunity, building foundations for long-term growth and dignity.
+                    <p className="text-gray-600">To empower communities through sustainable programs that expand access to education, mental wellness, art, and technology, building foundations for long-term growth and dignity.
                     </p>
                   </div>
                 </div>
@@ -276,7 +276,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Education & Literacy(E-Learning)</h3>
                   <p className="text-gray-600 mb-4">
-                  Empowering students through digital learning, graphic design, coding, robotics, and hands-on 3D printing to spark creativity, drive innovation, and strengthen real-world problem-solving skills.
+                  Empowering youth through digital learning, graphic design, coding, robotics, and hands-on 3D printing to spark creativity, drive innovation, and strengthen real-world problem-solving skills.
                   </p>
                   <Link to="/tech-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                     View Projects <ArrowRight className="h-4 w-4 ml-1" />
