@@ -276,7 +276,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Education & Literacy(E-Learning)</h3>
                   <p className="text-gray-600 mb-4">
-                  Empowering youth through digital learning, graphic design, coding, robotics, and hands-on 3D printing to spark creativity, drive innovation, and strengthen real-world problem-solving skills.
+                  Empowering youths through digital learning, graphic design, coding, robotics, and hands-on 3D printing to spark creativity, drive innovation, and strengthen real-world problem-solving skills.
                   </p>
                   <Link to="/tech-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                     View Projects <ArrowRight className="h-4 w-4 ml-1" />
