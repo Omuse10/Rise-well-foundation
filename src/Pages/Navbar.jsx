@@ -12,11 +12,11 @@ function Navbar() {
       <div className="flex flex-row sm:flex-row sm:items-center ml-0 sm:ml-6">
         <img
           src={Logo}
-          alt="Rise-well Foundation Logo"
+          alt="Saniki Space Foundation Logo"
           className="h-20 w-24 sm:h-24 sm:w-28 object-contain"
         />
         <Link to="/" className="text-left text-lg sm:text-2xl font-black leading-tight text-gray-800 sm:ml-2 mt-6 sm:mt-0">
-          Rise-well Foundation
+          Saniki Space Foundation
           <span className="hidden sm:inline">&nbsp;</span>
           <br className="block sm:hidden" />
           Kenya

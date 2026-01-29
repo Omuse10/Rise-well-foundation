@@ -77,11 +77,11 @@ function App() {
               <div className="flex flex-row sm:flex-row sm:items-center -ml-6 sm:ml-6">
                 <img 
                   src={Logo} 
-                  alt="Rise-well Foundation Logo" 
+                  alt="Saniki Space Foundation Logo" 
                   className="h-20 w-24 sm:h-24 sm:w-28 object-contain" 
                 />
                 <h1 className="text-left text-lg sm:text-2xl font-black leading-tight text-gray-800 sm:ml-2 mt-6 sm:mt-0">
-                  Rise-well Foundation 
+                  Saniki Space Foundation 
                   <span className="hidden sm:inline">&nbsp;</span>
                   <br className="block sm:hidden" />
                   Kenya
@@ -195,10 +195,10 @@ function App() {
                   Building a Better Kenya, One Community at a Time
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-RiseWell Foundation is a sanctuary of healing, creativity, and innovation.
+Saniki Foundation is a sanctuary of healing, creativity, and innovation.
 It is a place where young people are truly seen, heard, and supported. It is where no child walks through trauma alone, and every dream has room to grow.
 
-We exist to raise a new generation of emotionally healthy youth, confident innovators, and creative change makers who will shape the future of Kenya and Africa. Guided by fairness, dignity, and empowerment, RiseWell opens doors for every child to thrive, not just survive.
+We exist to raise a new generation of emotionally healthy youth, confident innovators, and creative change makers who will shape the future of Kenya and Africa. Guided by fairness, dignity, and empowerment, Saniki opens doors for every child to thrive, not just survive.
 
 Through our three core pillars:
 
@@ -214,7 +214,7 @@ Access to compassionate counseling, mental wellness education, and emotional sup
 
 Hands-on digital learning, from coding and 3D printing to digital entrepreneurship which equips youth with skills for today’s world and tomorrow’s opportunities.
 
-Together, these pillars cultivate talent, restore hope, and create opportunities that break the cycle of poverty and inequality. RiseWell’s holistic approach blends education, mental health, creative expression, and tech-driven skill building to uplift entire communities, one life at a time.
+Together, these pillars cultivate talent, restore hope, and create opportunities that break the cycle of poverty and inequality. Saniki’s holistic approach blends education, mental health, creative expression, and tech-driven skill building to uplift entire communities, one life at a time.
 
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
@@ -293,7 +293,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Healthcare Access</h3>
                   <p className="text-gray-600 mb-4">
-                  Rise-Well improves community well-being by providing accessible mental health support, offering safe counseling spaces, training local helpers, and promoting awareness to reduce stigma. Our goal is to strengthen resilience and ensure people get the help they need.
+                  Saniki Space improves community well-being by providing accessible mental health support, offering safe counseling spaces, training local helpers, and promoting awareness to reduce stigma. Our goal is to strengthen resilience and ensure people get the help they need.
                   </p>
                   {/* <Link to="/mental-health-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                     View Projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -310,7 +310,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Entertainment</h3>
                   <p className="text-gray-600 mb-4">
-                  Empowering upcoming artists through teaching and providing access to a community music studio, photography and videography resources, and other creative tools. Rise-Well also supports cultural events, promotes local arts and crafts, and fosters community engagement to inspire expression, talent development, and shared cultural pride..
+                  Empowering upcoming artists through teaching and providing access to a community music studio, photography and videography resources, and other creative tools. Saniki Space also supports cultural events, promotes local arts and crafts, and fosters community engagement to inspire expression, talent development, and shared cultural pride..
                   </p>
                   <Link to="/entertainment-projects" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
                     View Projects <ArrowRight className="h-4 w-4 ml-1" />
@@ -341,7 +341,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                "Thanks to Rise-Well Foundation, we learned robotics and Arduino and built a secure door lock system. Now our community spaces are safer, and we feel empowered using the technology we learned."
+                "Thanks to Saniki Space Foundation, we learned robotics and Arduino and built a secure door lock system. Now our community spaces are safer, and we feel empowered using the technology we learned."
                 </p>
                 <div className="flex items-center">
                   <img 
@@ -365,7 +365,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                "Thanks to Rise-Well Foundation, we now have access to mental health support. The mobile clinic has made it easier for our community to get help when needed."
+                "Thanks to Saniki Space Foundation, we now have access to mental health support. The mobile clinic has made it easier for our community to get help when needed."
                 </p>
                 <div className="flex items-center">
                   <img 
@@ -389,7 +389,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                "Thanks to the Rise-Well program, I learned new skills in carpentry and making things with my hands. Now I can create projects on my own and even teach my friends what I’ve learned!"
+                "Thanks to the Saniki Space program, I learned new skills in carpentry and making things with my hands. Now I can create projects on my own and even teach my friends what I’ve learned!"
                 </p>
                 <div className="flex items-center">
                   <img 
@@ -413,7 +413,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                "Thanks to the Rise-Well program, I learned how to design and 3D print cool items. Now I can create my own projects and even show my friends how to make their own 3D creations!"
+                "Thanks to the Saniki Space program, I learned how to design and 3D print cool items. Now I can create my own projects and even show my friends how to make their own 3D creations!"
                 </p>
                 <div className="flex items-center">
                   <img 
@@ -646,7 +646,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                     <Mail className="h-6 w-6 text-emerald-400 mr-4" />
                     <div>
                       <div className="font-semibold">Email</div>
-                      <div className="text-gray-300">info@risewellfoundationkenya.org</div>
+                      <div className="text-gray-300">info@Sanikispacefoundation.org</div>
                     </div>
                   </div>
 
@@ -654,7 +654,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                     <Globe className="h-6 w-6 text-emerald-400 mr-4" />
                     <div>
                       <div className="font-semibold">Website</div>
-                      <div className="text-gray-300">www.risewellfoundationkenya.org</div>
+                      <div className="text-gray-300">www.Sanikispacefoundation.org</div>
                     </div>
                   </div>
                 </div>
@@ -753,10 +753,10 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                 <div className="flex items-center mb-4">
                   <img 
                     src={Logo}
-                    alt="Rise-well Foundation Logo" 
+                    alt="Saniki Space Foundation Logo" 
                     className="h-28 w-32 ml-0 mr-0" 
                   />
-                  <span className="text-xl font-bold text-white">Rise-well Foundation Kenya</span>
+                  <span className="text-xl font-bold text-white">Saniki Space Foundation Kenya</span>
                 </div>
                 <p className="text-gray-400 mb-4">
                   Transforming communities across Kenya through sustainable development programs 
@@ -769,10 +769,10 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   <a href="https://www.instagram.com/rise.well.foundation.kenya/#" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                     <Instagram className="h-5 w-5 text-white" />
                   </a>
-                  <a href="https://x.com/risewellorg" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                  <a href="https://x.com/Sanikiorg" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                     <Twitter className="h-5 w-5 text-white" />
                   </a>
-                  <a href=" https://www.linkedin.com/in/rise-well-b70597397/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BaPA3NYEoRlSGLgUW3aJ2EA%3D%3D" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
+                  <a href=" https://www.linkedin.com/in/Saniki Space-b70597397/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BaPA3NYEoRlSGLgUW3aJ2EA%3D%3D" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 cursor-pointer transition-colors">
                     <Linkedin className="h-5 w-5 text-white" />
                   </a>
                 </div>
@@ -802,7 +802,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
 
             <div className="border-t border-gray-800 mt-8 pt-8 text-center">
               <p className="text-gray-400">
-                © 2025 Rise-well Foundation Kenya. All rights reserved. | Reg. No: NPO/123/2010
+                © 2025 Saniki Space Foundation Kenya. All rights reserved. | Reg. No: NPO/123/2010
               </p>
             </div>
           </div>

@@ -13,11 +13,11 @@ function Footer() {
             <div className="flex items-center mb-4">
               <img
                 src={Logo}
-                alt="Rise-well Foundation Logo"
+                alt="Saniki Space Foundation Logo"
                 className="h-28 w-32 ml-0 mr-0"
               />
               <span className="text-xl font-bold text-white ml-2">
-                Rise-well Foundation Kenya
+                Saniki Space Foundation Kenya
               </span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -53,7 +53,7 @@ function Footer() {
                 <Twitter className="h-5 w-5 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/in/rise-well-b70597397/"
+                href="https://www.linkedin.com/in/Saniki Space-b70597397/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors"
@@ -95,7 +95,7 @@ function Footer() {
         {/* Bottom note */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Rise-well Foundation Kenya. All rights reserved. | Reg. No: NPO/123/2010
+            © 2025 Saniki Space Foundation Kenya. All rights reserved. | Reg. No: NPO/123/2010
           </p>
         </div>
       </div>
