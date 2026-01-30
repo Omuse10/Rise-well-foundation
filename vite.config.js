@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: "/saniki-space-foundation-kenya/",
+  base: "/",
 })
