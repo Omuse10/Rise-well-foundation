@@ -17,9 +17,9 @@ function Navbar() {
         />
         <Link to="/" className="text-left text-lg sm:text-2xl font-black leading-tight text-gray-800 sm:ml-2 mt-6 sm:mt-0">
           Saniki Space Foundation
-          <span className="hidden sm:inline">&nbsp;</span>
+          {/*<span className="hidden sm:inline">&nbsp;</span>
           <br className="block sm:hidden" />
-          Kenya
+          Kenya*/}
         </Link>
       </div>
 

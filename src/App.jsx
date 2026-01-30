@@ -82,9 +82,9 @@ function App() {
                 />
                 <h1 className="text-left text-lg sm:text-2xl font-black leading-tight text-gray-800 sm:ml-2 mt-6 sm:mt-0">
                   Saniki Space Foundation 
-                  <span className="hidden sm:inline">&nbsp;</span>
+                  {/*<span className="hidden sm:inline">&nbsp;</span>
                   <br className="block sm:hidden" />
-                  Kenya
+                  Kenya*/}
                 </h1>
               </div>
               
@@ -756,7 +756,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                     alt="Saniki Space Foundation Logo" 
                     className="h-28 w-32 ml-0 mr-0" 
                   />
-                  <span className="text-xl font-bold text-white">Saniki Space Foundation Kenya</span>
+                  <span className="text-xl font-bold text-white">Saniki Space Foundation {/*Kenya*/}</span>
                 </div>
                 <p className="text-gray-400 mb-4">
                   Transforming communities across Kenya through sustainable development programs 

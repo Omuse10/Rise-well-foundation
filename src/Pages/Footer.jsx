@@ -17,7 +17,7 @@ function Footer() {
                 className="h-28 w-32 ml-0 mr-0"
               />
               <span className="text-xl font-bold text-white ml-2">
-                Saniki Space Foundation Kenya
+                Saniki Space Foundation {/*Kenya*/}
               </span>
             </div>
             <p className="text-gray-400 mb-4">
