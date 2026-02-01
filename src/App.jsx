@@ -594,20 +594,20 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </p>
                 </div>
 
-                {/* Volunteer 4: Yasmine */}
+                {/* Volunteer 4: James */}
                 <div className="bg-white rounded-lg shadow-lg p-8">
                   <div className="flex items-center mb-4">
                     <img 
-                      src="https://i.postimg.cc/W3hDkd0j/(8).jpg" // Replace with Yasmine's image URL
-                      alt="Yasmine" 
+                      src="https://i.postimg.cc/Qd9ZwkGz/Whats-App-Image-2026-01-30-at-12-56-28-PM.jpg" // Replace with James's image URL
+                      alt="James" 
                       className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                     />
                     <div>
-                      <h4 className="text-xl font-semibold">Yasmine</h4>
+                      <h4 className="text-xl font-semibold">James</h4>
                     </div>
                   </div>
                   <p className="text-gray-600">
-                    A driven volunteer who has contributed to our community outreach initiatives. Her expertise and passion for making a difference in the lives of others inspire us all.
+                  A volunteer Social Media Manager who transforms stories into impact—driving awareness, engagement, and support for the foundation’s work across communities.
                   </p>
                 </div>
               </div>
