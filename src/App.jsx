@@ -236,8 +236,8 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Our Vision</h3>
-                    <p className="text-gray-600">Our Vision
-                    To elevate African art, talent, and innovation to the global stage and transform communities through creativity, collaboration, and healing.</p>
+                    <p className="text-gray-600">
+                    To elevate African art, talent, and innovation to the global stage while transforming communities through creativity, healing, and opportunity.</p>
                   </div>
                 </div>
               </div>
@@ -802,7 +802,7 @@ Together, these pillars cultivate talent, restore hope, and create opportunities
 
             <div className="border-t border-gray-800 mt-8 pt-8 text-center">
               <p className="text-gray-400">
-                © 2025 Saniki Space Foundation Kenya. All rights reserved. | Reg. No: NPO/123/2010
+              © 2026 Saniki Space Foundation Kenya. All rights reserved. | Reg. No: DAG/CBO/5/4/2018/240 | Issue Date: 08/03/2019
               </p>
             </div>
           </div>
